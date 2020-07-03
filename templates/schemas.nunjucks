@@ -1,0 +1,12 @@
+<details><summary><strong>Schema</strong></summary>
+
+{% for schema in parent.schema %}
+
+```{{ getLanguage(body.key) }}
+{{ schema }}
+```
+
+{% endfor %}
+
+</p>
+</details>
