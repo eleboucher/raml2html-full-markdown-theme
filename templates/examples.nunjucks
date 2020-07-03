@@ -1,0 +1,16 @@
+{% if parent.examples.length %}
+    {% for example in parent.examples %}
+{% if (example.displayName) %}
+> **{{ example.displayName }}**
+{% endif %}
+    {% if (example.description) %}
+
+> {{ example.description }}
+
+    {% endif %}
+
+```{{ getLanguage(body.key) }}
+{{ example.value }}
+```
+    {% endfor %}
+{% endif %}
