@@ -1,4 +1,4 @@
-# raml2html-full-markdown-theme [![NPM version][npm-image]][npm-url]
+#raml2html-markdown-theme-schema [![NPM version][npm-image]][npm-url]
 
 > Render the RAML API spec in the slate documentation layout using raml2html
 
@@ -12,7 +12,7 @@ The theme is called **full** Markdown theme because it includes much more fields
 ## Installation
 
 ```sh
-$ npm install -g raml2html-full-markdown-theme
+$ npm install -graml2html-markdown-theme-schema
 ```
 
 ## Usage
@@ -20,13 +20,19 @@ $ npm install -g raml2html-full-markdown-theme
 In javascript:
 
 ```js
-const raml2html = require('raml2html');
-const options = {'template-dir': 'templates'}
-const mdConfig = raml2html.getConfigForTheme('raml2html-full-markdown-theme', options);
+const raml2html = require('raml2html')
+const options = { 'template-dir': 'templates' }
+const mdConfig = raml2html.getConfigForTheme(
+  'raml2html-full-markdown-theme',
+  options
+)
 
 // source can be a filename, url or parsed RAML object
 const source = 'path/to/raml/file'
-raml2html.render(source, mdConfig).then((html) => console.log(html)).catch((error) => console.error(error))
+raml2html
+  .render(source, mdConfig)
+  .then((html) => console.log(html))
+  .catch((error) => console.error(error))
 ```
 
 On the command line:
@@ -41,8 +47,7 @@ raml2html \
 
 ## Options
 
-* *--template-dir* The path to custom templates directory. If omitted — the default template is used.
-
+- _--template-dir_ The path to custom templates directory. If omitted — the default template is used.
 
 [npm-image]: https://badge.fury.io/js/raml2html-full-markdown-theme.svg
 [npm-url]: https://npmjs.org/package/raml2html-full-markdown-theme

@@ -11,7 +11,9 @@
     {%- endfor %}
 {% endif -%}
 
-{% if mediaType %}**mediaType** {{ mediaType }}{% endif %}
+{% if mediaType %}
+**mediaType** {{ mediaType }}
+{% endif %}
 
 {% for item in documentation %}
 # {{ item.title }}
