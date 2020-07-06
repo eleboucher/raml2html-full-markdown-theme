@@ -1,3 +1,4 @@
+{% if parent.schema %}
 <details><summary><strong>Schema</strong></summary>
 
 {% for schema in parent.schema %}
@@ -10,3 +11,4 @@
 
 </p>
 </details>
+{% endif %}
