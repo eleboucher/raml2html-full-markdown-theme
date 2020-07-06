@@ -1,4 +1,5 @@
 {% if parent.examples.length %}
+**Examples**
     {% for example in parent.examples %}
 {% if (example.displayName) %}
 > **{{ example.displayName }}**

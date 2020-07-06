@@ -11,8 +11,8 @@
 {{ getCurlStatement(method, resource) }}
 ```
 
+## Request
     {% if ((method.headers | length != 0) and hasExamples(method.headers)) %}
-## REQUEST
 
 **Header**
 
@@ -25,13 +25,12 @@
 ```
     {% endif %}
 
-    {% if method.body %}
+    {% if ((method.body | length != 0) and hasExamples(method.body)) %}
       {% for body in method.body %}
 
 **BODY**
 {% set parent = b %}
 {% include "./schemas.nunjucks" %}
-**Examples**
 {% include "./examples.nunjucks" %}
       {% endfor %}
     {% endif %}
@@ -93,7 +92,7 @@
       {% for b in response.body %}
 {% set parent = b %}
 {% include "./schemas.nunjucks" %}
-**Examples**
+
 {% include "./examples.nunjucks" %}
       {% endfor %}
     {% endif %}
