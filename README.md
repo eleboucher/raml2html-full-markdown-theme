@@ -12,7 +12,7 @@ The theme is called **full** Markdown theme because it includes much more fields
 ## Installation
 
 ```sh
-$ npm install -graml2html-markdown-theme-schema
+$ npm install -g raml2html-markdown-theme-schema
 ```
 
 ## Usage
